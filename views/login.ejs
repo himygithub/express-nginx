@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+	</head>
+	<body>
+		<div id="testReact"></div>
+		<input type="text" name="name1" />
+		<input type="password" name="password1" />
+		<button id="submit1">提交</button>
+
+		<form action="/login" method="POST">
+			<input type="text" name="name" />
+			<input type="password" name="password" />
+			<button id="submit">提交</button>
+
+		</form>
+		<script src="/javascripts/common/common.js"></script>
+		<script src="/javascripts/common/index.js"></script>
+		<script data-main="/javascripts/app/login.js" src="/javascripts/require.js"></script>
+	</body>
+</html>

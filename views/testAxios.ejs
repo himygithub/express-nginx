@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+	</head>
+	<body>
+		
+	<!--	<script src="/javascripts/appChannel/common.js"></script>
+		<script src="/javascripts/appChannel/getMsg.js"></script>
+-->
+		<script type="text/javascript" src="javascripts/lib/jquery.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$.ajax({
+					type:"POST",
+					url:"/users/official-web/api/static/codes/idtype",
+					success:function(data){
+						if(data){
+							var str ="调java服务成功"+JSON.stringify(data);
+							
+							$("body").html(str);
+						}
+						
+					},
+					error:function(err){
+						alert(err);
+					}
+				})
+			})
+		</script>
+	</body>
+</html>
